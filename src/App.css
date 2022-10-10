@@ -84,3 +84,10 @@ h2 {
   display: flex;
   gap: 2em;
 }
+
+.submission-page {
+width: 40em;
+margin: auto;
+margin-top: 10em;
+text-align: center;
+}

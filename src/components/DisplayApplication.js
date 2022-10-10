@@ -1,9 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
+import SubmissionPage from './SubmissionPage';
 
-export default function DisplayApplication({generalInfo, educationInfo, practicalInfo}) {
+
+export default function DisplayApplication({setGeneralInfo, setEducationInfo, setPracticalInfo, generalInfo, educationInfo, practicalInfo, setCompleted}) {
+  const [submit, setSubmit] = useState(false)
+
+  const handleEdit = () => {
+    setCompleted(false);
+  }
+  const handleSubmit = () => {
+    setSubmit(true);
+  }
 
   return (
-    <div className="display-container">
+    <div>
+    {submit ? (
+      <div>
+       <SubmissionPage setCompleted={setCompleted} setSubmit={setSubmit} setGeneralInfo={setGeneralInfo} setEducationInfo={setEducationInfo} setPracticalInfo={setPracticalInfo}/>
+      </div>) : (
+      <div className="display-container">
       <h1>Review Application</h1>
       <div className="bg-1 info-container">
         <h2>General Info</h2>
@@ -53,10 +68,13 @@ export default function DisplayApplication({generalInfo, educationInfo, practica
         </div>
       </div>
       <div className="btn-container">
-        <button>Edit</button>
-        <button>Send</button>
+        <button onClick={handleEdit}>Edit</button>
+        <button onClick={handleSubmit}>Send</button>
       </div>
       
     </div>
+    )}
+    </div>
+    
   )
 }

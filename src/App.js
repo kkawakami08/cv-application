@@ -23,18 +23,21 @@ function App() {
   })
   const [completed, setCompleted] = useState(false)
 
+  const handleSubmit = (e) => {
+    setCompleted(true);
+  }
   return (
     <div>
       {completed ? (
       <div>
-        <DisplayApplication generalInfo={generalInfo} practicalInfo={practicalInfo} educationInfo={educationInfo}/>
+        <DisplayApplication generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} practicalInfo={practicalInfo} setPracticalInfo={setPracticalInfo} educationInfo={educationInfo} setEducationInfo={setEducationInfo} setCompleted={setCompleted}/>
       </div>) : (
         <div className="container">
           <h1>Application</h1>
         <GeneralSection generalInfo={generalInfo} setGeneralInfo={setGeneralInfo}/>
         <EducationSection educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
         <PracticalSection practicalInfo={practicalInfo} setPracticalInfo={setPracticalInfo}/>
-        <button>Review</button>
+        <button onClick={handleSubmit}>Review</button>
       </div>
       )}
     </div>
