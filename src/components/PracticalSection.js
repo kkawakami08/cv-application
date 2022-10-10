@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function PracticalSection() {
+export default function PracticalSection({practialInfo, setPracticalInfo}) {
   return (
-    <div>
-      <h1>Practical Experience</h1>
+    <div className="bg-1 info-container">
+      <h2>Practical Experience</h2>
       <form>
         <input type="text" placeholder='Company Name'/>
         <input type="text" placeholder='Position Title'/>

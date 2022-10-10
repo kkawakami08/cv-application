@@ -8,7 +8,7 @@ form {
 input {
   height: 2.5em;
   border-radius: 1em;
-  border: solid 2px rgb(208, 208, 208);
+  border: none;
   padding: 0 1em;
 }
 
@@ -19,12 +19,60 @@ button {
   height: 2em;
   border: none;
   font-size: large;
-  margin-top: 2em;
+  margin-top: 1em;
+}
+
+p {
+  font-size: large;
+}
+
+h4 {
+  font-size: large;
+}
+
+h2 {
+  text-decoration: underline;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5em;
+  margin-top: 3em;
+  gap: 2em;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+  gap: 2em;
+  align-items: center;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+}
+
+.bg-1 {
+  background-color: rgb(159, 237, 201);
+}
+
+.bg-2 {
+  background-color: rgb(237, 233, 159);
+}
+
+.info-container {
+  padding: 1em 2em;
+  border-radius: 1em;
+  width: 30em;
+
+}
+
+.btn-container {
+  display: flex;
+  gap: 2em;
 }

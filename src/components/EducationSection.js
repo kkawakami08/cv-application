@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function EducationSection() {
+export default function EducationSection({educationInfo, setEducationInfo}) {
   return (
-    <div>
-      <h1>Education</h1>
+    <div className="bg-2 info-container">
+      <h2>Education</h2>
       <form>
         <input type="text" placeholder='School Name'/>
-        <input type="text" placeholder='Title of Study'/>
-        <input type="text" placeholder='Date of Study'/>
+        <input type="text" placeholder='Degree'/>
+        <input type="text" placeholder='Year of Degree'/>
       </form>
     </div>
   )
