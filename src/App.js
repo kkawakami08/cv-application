@@ -7,21 +7,21 @@ import DisplayApplication from './components/DisplayApplication';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
-    name: "Kaori",
-    email: "@gmail",
-    phone: "4444"
+    name: "",
+    email: "",
+    phone: ""
   })
   const [educationInfo, setEducationInfo] = useState({
-    name: "cpp",
-    study: "bio",
-    studyYear: "2013"
+    name: "",
+    study: "",
+    studyYear: ""
   })
   const [practicalInfo, setPracticalInfo] = useState({
-    name: "reju",
-    position: "video",
-    occupationDates: "10"
+    name: "",
+    position: "",
+    occupationDates: ""
   })
-  const [completed, setCompleted] = useState(true)
+  const [completed, setCompleted] = useState(false)
 
   return (
     <div>
