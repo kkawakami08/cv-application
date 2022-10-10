@@ -30,6 +30,7 @@ function App() {
         <DisplayApplication generalInfo={generalInfo} practicalInfo={practicalInfo} educationInfo={educationInfo}/>
       </div>) : (
         <div className="container">
+          <h1>Application</h1>
         <GeneralSection generalInfo={generalInfo} setGeneralInfo={setGeneralInfo}/>
         <EducationSection educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
         <PracticalSection practicalInfo={practicalInfo} setPracticalInfo={setPracticalInfo}/>
